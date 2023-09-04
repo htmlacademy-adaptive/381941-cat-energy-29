@@ -1,0 +1,79 @@
+.advantages__title {
+  color: @color-default-black;
+  font-family: @ff-secondary;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.advantages__icon {
+  width: 100px;
+  height: 100px;
+  background: @color-apple;
+  border-radius: 50px;
+  position: relative;
+
+  &--1::before {
+    content: "";
+    background: url("../img/cat-icon.svg");
+    background-size: contain;
+    width: 70px;
+    height: 97px;
+    display: block;
+    position: absolute;
+  }
+
+  &--2::before {
+    content: "";
+    background: url("../img/tiger-icon.svg");
+    width: 134px;
+    height: 56px;
+    display: block;
+    position: absolute;
+    background-size: contain;
+    left: -24px;
+    top: 22px;
+  }
+}
+
+.advantages__column-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 47px;
+}
+
+.advantages__description {
+  color: @color-default-black;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.advantages__container {
+  max-width: 570px;
+  padding: 41px 52px;
+  background: @color-white-smoke;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+.advantages__link {
+  color: @color-default-black;
+  text-align: center;
+  font-family: @ff-secondary;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.advantages__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
