@@ -1,55 +1,167 @@
 .additional-products__title {
   color: @color-default-black;
   font-family: @ff-secondary;
-  font-size: 36px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 36px;
-  margin-bottom: 81px;
+  line-height: 24px;
+  margin-bottom: 29px;
+  margin-top: 26px;
+  position: relative;
+  background: @color-default-white;
+  width: fit-content;
+  padding: 0 20px;
+  left: -20px;
+
+  @media @tablet {
+    margin-top: -18px;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 36px;
+    left: 0px;
+    margin-bottom: 80px;
+    padding: 0 40px;
+  }
+
+  @media @desctop {
+    left: -39px;
+    margin-bottom: 97px;
+    margin-top: -10px;
+  }
 }
 
 .additional-products__subtitle {
   color: @color-nero;
   font-family: @ff-secondary;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 16px;
   text-transform: uppercase;
-  width: 190px;
+  width: 100%;
+
+  @media @tablet {
+    width: inherit;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media @desctop {
+    min-width: 260px;
+  }
+}
+
+.additional-products__item {
+  margin-top: 20px;
+  min-height: 110px;
+  position: relative;
+
+  &:last-child::after {
+    @media @tablet {
+      display: none;
+    }
+  }
+
+  @media @tablet {
+    margin-top: 0;
+    margin-bottom: 29px;
+  }
+
+  @media @desctop {
+    min-height: 43px;
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    width: 707px;
+    left: -38px;
+    height: 1px;
+    position: absolute;
+    background: #cdcdcd;
+    bottom: 0px;
+
+    @media @desctop {
+      display: none;
+    }
+
+  }
+
+  &:last-child {
+    @media @tablet {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .additional-products__item-button {
   color: @color-default-white;
   text-align: center;
   font-family: @ff-secondary;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
   background: @color-apple;
-  padding: 14px 26px;
+  padding: 10px 26px;
   text-decoration: none;
-  min-width: 170px;
-  margin-bottom: 30px;
+  width: 100%;
   border: none;
+
+  @media @desctop {
+    width: inherit;
+    font-size: 16px;
+    padding: 9px 26px;
+    min-width: 244px;
+  }
 }
 
 .additional-products__measure {
   color: @color-charcoal;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 14px;
+  margin-bottom: 7px;
+
+  @media @tablet {
+    margin-left: auto;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+
+  @media @desctop {
+    margin-left: inherit;
+    text-align: left;
+    min-width: 215px;
+    position: relative;
+    left: 34px;
+    top: 3px;
+  }
 }
 
 .additional-products__price {
   color: @color-charcoal;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 14px;
+
+  @media @tablet {
+    font-size: 16px;
+    line-height: 20px;
+    min-width: 40px;
+    text-align: right;
+  }
+
+  @media @desctop {
+    min-width: 50px;
+    text-align: left;
+  }
 }
 
 .additional-products__header {
@@ -57,4 +169,151 @@
   align-content: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+
+  @media @tablet {
+    gap: 22px;
+  }
+
+  @media @desctop {
+    position: relative;
+  }
+
+  &::after {
+    @media @desctop {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: #cdcdcd;
+      top: -17px;
+    }
+  }
+
+  &--first {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: #cdcdcd;
+      bottom: -16px;
+    }
+  }
+}
+
+.additional-products__present {
+  width: 100%;
+
+  @media @desctop {
+    max-width: 245px;
+  }
+}
+
+.additional-products__present-wrapper {
+  background: linear-gradient(90deg, fade(@color-apple, 85%), fade(@color-apple, 85%)), url(../img/present-background.jpg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 290px;
+  margin-bottom: 36px;
+  padding: 59px 0 43px 0;
+
+  @media @tablet {
+    background: linear-gradient(90deg, fade(@color-apple, 85%), fade(@color-apple, 85%)), url(../img/present-background-tablet.jpg);
+    min-height: 200px;
+    margin-bottom: 76px;
+    flex-direction: row;
+    padding: 0 125px 0 78px;
+  }
+
+  @media @desctop {
+    min-height: 289px;
+    flex-direction: column;
+    padding: 55px 0 45px 0;
+    position: relative;
+    top: -17px;
+    margin-bottom: 69px;
+    background: linear-gradient(90deg, fade(@color-apple, 85%), fade(@color-apple, 85%)), url(../img/present-background-pc.jpg);
+  }
+}
+
+.additional-products__wrapper {
+  width: 100%;
+}
+
+.additional-products__description {
+  color: @color-default-white;
+  margin: 0;
+  text-align: center;
+  font-family: @ff-primary;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  max-width: 161px;
+
+  @media @tablet {
+    margin-left: auto;
+    text-align: left;
+  }
+
+  @media @desctop {
+    margin-left: 0;
+    text-align: center;
+    margin-top: auto;
+  }
+}
+
+.present__icon {
+  margin-bottom: 45px;
+
+  @media @tablet {
+    margin-bottom: 0;
+  }
+}
+
+.additional-products__wrapper-outer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.additional-products__wrapper {
+
+  margin-bottom: 40px;
+
+  @media @tablet {
+    padding: 27px 38px 0px 38px;
+    border: 1px solid @color-very-light-grey;
+    margin-bottom: 69px;
+  }
+
+  @media @desctop {
+    max-width: 895px;
+    padding: 0;
+    border: inherit;
+  }
+}
+
+
+.additional-products__title::before {
+  content: '';
+  width: 150vw;
+  height: 2px;
+  background-color: @color-apple;
+  position: absolute;
+  display: block;
+  left: -50vw;
+  top: 15px;
+  z-index: -1;
+
+  @media @tablet {
+    top: 22px;
+  }
 }

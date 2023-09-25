@@ -5,31 +5,37 @@
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="favicon.ico">
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header main-header__home">
     <div class="container main-header__wrapper">
       <a class="main-header__logo">
-        <img class="main-header__logo-image" src="img/logo-pic.svg" width="60" height="50" alt="Кэт энерджи логотип">
-        <img class="main-header__logo-text" src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи логтип в виде текста">
+        <div class="main-header__logo-image">
+          <span class="visually-hidden">Логотип сайта</span>
+        </div>
+        <img class="main-header__logo-text" src="img/logo-text.svg" width="101" height="18"
+          alt="Кэт энерджи логотип в виде текста">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav__wrapper--switch">
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
-              <a href="#">Главная</a>
+              <a href="/">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Каталог продукции</a>
+              <a href="catalog.html">Каталог продукции</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Подбор программы</a>
+              <a href="form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       </nav>
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </div>
   </header>
   <main class="main-container">
@@ -37,13 +43,18 @@
     <section class="hero">
       <div class="container">
         <div class="hero__wrapper">
-          <header class="hero__header">
-            <h2 class="hero__slogan">Функциональное питание для котов</h2>
-            <p class="hero__intro">Занялся собой? Займись котом!</p>
-            <a class="hero__button-link" href="#">Подобрать программу</a>
-          </header>
-
-          <img class="hero__image-main" width="709" height="609" src="img/hero-can.jpg" alt="">
+          <div class="hero__header-wrapper-outer">
+            <header class="hero__header">
+              <h2 class="hero__slogan">Функциональное питание для котов</h2>
+              <p class="hero__intro">Занялся собой? Займись котом!</p>
+            </header>
+            <a class="hero__button-link button" href="#">Подобрать программу</a>
+          </div>
+          <div class="hero__image-main-wrapper">
+            <div class="hero__image-main">
+              <span class="visually-hidden">Банка корма</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -56,7 +67,8 @@
               <div class="advantages__icon advantages__icon--1"></div>
               <h3 class="advantages__title">похудение</h3>
             </div>
-            <p class="advantages__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <p class="advantages__description">Ваш кот весит больше собаки и почти утратил способность лазить по
+              деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           </div>
           <a class="advantages__link" href="#">каталог slim</a>
         </div>
@@ -66,7 +78,8 @@
               <div class="advantages__icon advantages__icon--2"></div>
               <h3 class="advantages__title">набор массы</h3>
             </div>
-            <p class="advantages__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <p class="advantages__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy
+              Pro поможет вашему коту нарастить необходимые мышцы!</p>
           </div>
           <a class="advantages__link" href="#">каталог pro</a>
 
@@ -74,9 +87,11 @@
       </div>
     </section>
     <section class="how-it-work">
-      <div class="container"><h2 class="how-it-work__title">Как это работает</h2></div>
+      <div class="container">
+        <h2 class="how-it-work__title">Как это работает</h2>
+      </div>
       <div class="container how-it-work__wrapper">
-        <div class="how-it-work__item">
+        <div class="how-it-work__item how-it-work__item--fix">
           <div class="how-it-work__icon how-it-work__icon--1">
           </div>
           <p class="how-it-work__description">Функциональное питание содержит только полезные питательные вещества.</p>
@@ -84,7 +99,8 @@
         <div class="how-it-work__item">
           <div class="how-it-work__icon how-it-work__icon--2">
           </div>
-          <p class="how-it-work__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+          <p class="how-it-work__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+          </p>
         </div>
         <div class="how-it-work__item">
           <div class="how-it-work__icon how-it-work__icon--3">
@@ -107,23 +123,27 @@
 
 
           <div class="example__row">
-            <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-            <div class="example__item-wrapper">
-              <div class="example__item">
-                <span class="example__item-heading">5 КГ</span>
-                <span class="example__item-description">снижение веса</span>
-              </div>
-              <div class="example__item">
-                <span class="example__item-heading">60 ДНЕЙ</span>
-                <span class="example__item-description">затрачено времени</span>
-              </div>
-            </div>
-            <ul class="example__price">
-              <li class="example__price-item">Затраты на питание:</li>
-              <li class="example__price-item">15 000 РУБ.</li>
-          </ul>
-        </div>
+            <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
+              Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и
+              по-прежнему спит по 16 часов в день. </p>
 
+            <div class="example__item-wrapper-outer">
+              <div class="example__item-wrapper">
+                <div class="example__item">
+                  <span class="example__item-heading">5 КГ</span>
+                  <span class="example__item-description">снижение веса</span>
+                </div>
+                <div class="example__item">
+                  <span class="example__item-heading">60 ДНЕЙ</span>
+                  <span class="example__item-description">затрачено времени</span>
+                </div>
+              </div>
+              <ul class="example__price">
+                <li class="example__price-item">Затраты на питание:</li>
+                <li class="example__price-item">15 000 РУБ.</li>
+              </ul>
+            </div>
+          </div>
           <div class="example__compare-images">
             <img class="example__img-before" width="560" height="512" src="img/cat-full-before.png" alt="">
             <img class="example__img-after" width="560" height="512" src="img/cat-full-after.png" alt="">
@@ -136,15 +156,17 @@
       </div>
     </section>
     <section class="map">
-      <div class="container map__wrapper">
-
-        <h2 class="visually-hidden">Карта</h2>
-        <div class="map__row">
-          <div class="map__slogan">приглашаем к сотрудничеству дилеров!</div>
-          <div class="map__adress">ул. Большая Конюшенная, д. 19/8 </br></br>Санкт-Петербург</div>
+      <h2 class="visually-hidden">Карта</h2>
+      <div class="map__row">
+        <div class="map__slogan">приглашаем <br>к сотрудничеству дилеров!</div>
+        <div class="map__adress">
+          <p class="map__adress--first">ул. Большая Конюшенная, д. 19/8</p>
+          <p class="map__adress--second">Санкт-Петербург</p>
         </div>
+      </div>
+      <div class="container map__wrapper">
         <div class="map__image">
-          <img src="img/map-pin.png" width="113" height="106" class="map__icon" alt="">
+          <img src="img/map-pin.png" width="57" height="53" class="map__icon" alt="">
         </div>
       </div>
     </section>
@@ -175,11 +197,23 @@
       </div>
       <div class="main-footer__copyright">
         <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="visually-hidden">HTML Academy</span>
+          <div class="main-footer__copyright-text"><span class="visually-hidden">HTML Academy текст</span></div>
+          <div class="main-footer__copyright-img"><span class="visually-hidden">HTML Academy картинка</span></div>
         </a>
       </div>
     </div>
   </footer>
+
+  <script>
+    let menuOpen = document.querySelector('.main-nav__toggle');
+    let mainNavBox = document.querySelector('.main-nav');
+
+    menuOpen.onclick = function () {
+      mainNavBox.classList.toggle('main-nav__wrapper--switch');
+      menuOpen.classList.toggle('switch-icon');
+    };
+
+  </script>
 </body>
 
 </html>
