@@ -1,40 +1,203 @@
 .hero__slogan {
-  color: @color-default-black;
+  color: @color-default-white;
   font-family: @ff-secondary;
-  font-size: 60px;
+  font-size: 36px;
   font-style: normal;
   font-weight: 400;
-  line-height: 60px;
-  max-width: 420px;
-  margin-bottom: 40px;
+  line-height: 36px;
+  margin-bottom: 24px;
+  text-align: center;
+
+  @media @tablet {
+    color: @color-default-black;
+    max-width: 420px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    margin-bottom: 40px;
+    margin-top: 54px;
+    position: relative;
+    left: 8px;
+  }
+
+  @media @desctop {
+    margin-top: 11px;
+    left: -2px;
+  }
 }
 
 .hero__intro {
-  color: @color-default-black;
+  color: @color-default-white;
   font-family: @ff-secondary;
-  font-size: 20px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 14px;
   text-transform: uppercase;
-  margin-bottom: 52px;
+  margin-bottom: 30px;
+  text-align: center;
+
+  @media @tablet {
+    color: @color-default-black;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    margin-bottom: 50px;
+    position: relative;
+    left: 8px;
+  }
+
+  @media @desctop {
+    left: -2px;
+    top: -1px;
+  }
 }
 
 .hero__wrapper {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 20px;
+  flex-direction: column;
+
+  @media @tablet {
+    margin-bottom: -11px;
+  }
+
+  @media @desctop {
+    flex-direction: row;
+    margin-top: 90px;
+    margin-bottom: 133px;
+  }
 }
 
 .hero__button-link {
   color: @color-default-white;
   text-align: center;
-  font-family: @ff-primary;
-  font-size: 20px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 18px;
   text-transform: uppercase;
   background: @color-apple;
-  padding: 14px 26px;
+  padding: 11px 26px;
   text-decoration: none;
+  display: block;
+  font-family: @ff-secondary;
+  width: 100%;
+  order: 1;
+
+  @media @tablet {
+    order: inherit;
+    max-width: 244px;
+    margin-left: 81px;
+    position: relative;
+    left: 9px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 14px 26px;
+    box-sizing: border-box;
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+  }
+
+  @media @desctop {
+    left: -2px
+  }
+}
+
+.hero__image-main-wrapper {
+  &::before {
+    content: '';
+    height: 302px;
+    position: absolute;
+    top: 65px;
+    display: block;
+    width: 100%;
+    right: 0;
+    background: linear-gradient(90deg, fade(@color-apple, 85%), fade(@color-apple, 85%)), url(../img/hero-background.jpg);
+    z-index: -1;
+
+    @media @tablet {
+      display: none;
+    }
+
+    @media @desctop {
+      display: block;
+      width: 50vw;
+      top: 0;
+      height: 694px;
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+
+  }
+}
+
+.hero__image-main-wrapper {
+  @media @tablet {
+    margin: 0 auto;
+    margin-top: -75px;
+    z-index: -1;
+  }
+
+  @media @desctop {
+    max-width: 552px;
+  }
+}
+
+.hero__header {
+  @media @tablet {
+    margin-left: 81px;
+  }
+}
+
+.hero__image-main {
+  @media @tablet {
+    width: 709px;
+    height: 609px;
+  }
+
+  @media @desctop {
+    max-width: 100%;
+    height: 100%;
+    position: relative;
+    left: -137px;
+    background: url(../img/can-pc.png);
+    width: 552px;
+    height: 499px;
+  }
+}
+
+.hero__header-wrapper-outer {
+  display: contents;
+
+  @media @desctop {
+    display: block;
+  }
+}
+
+.hero__image-main-wrapper {
+  width: 280px;
+  height: 270px;
+  background: url(../img/can-mobile.png);
+  background-size: contain;
+  margin-bottom: 3px;
+
+  @media @tablet {
+    width: 709px;
+    height: 609px;
+    background: url(../img/can-tablet.jpg);
+    position: relative;
+    top: -8px;
+  }
+
+  @media @desctop {
+    position: inherit;
+    width: inherit;
+    height: inherit;
+    background: inherit;
+  }
 }
